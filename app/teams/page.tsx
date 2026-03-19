@@ -69,7 +69,7 @@ export default function TeamsPage() {
     ? teamStatuses.filter(t => t.status === 'eliminated')
     : teamStatuses.filter(t => t.owner === filter);
 
-  const uniqueOwners = [...new Set(teamStatuses.map(t => t.owner).filter(Boolean))];
+  const uniqueOwners = Array.from(new Set(teamStatuses.map(t => t.owner).filter(Boolean))) as string[];
 
   return (
     <div className="space-y-6">
