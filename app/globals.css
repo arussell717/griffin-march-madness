@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mm-orange: #FF6B35;
+  --mm-dark: #1a1a2e;
+  --mm-darker: #16213e;
+  --mm-blue: #0f3460;
+  --mm-accent: #e94560;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+}
+
+.card-flip {
+  animation: cardFlip 0.8s ease-in-out;
+  perspective: 1000px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,107,53,0.3), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.region-east { border-left-color: #3b82f6; }
+.region-west { border-left-color: #ef4444; }
+.region-south { border-left-color: #22c55e; }
+.region-midwest { border-left-color: #f59e0b; }
+
+.player-bg-Tom { background-color: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.4); }
+.player-bg-Stacie { background-color: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); }
+.player-bg-Taylor { background-color: rgba(236, 72, 153, 0.15); border-color: rgba(236, 72, 153, 0.4); }
+.player-bg-Austin { background-color: rgba(255, 107, 53, 0.15); border-color: rgba(255, 107, 53, 0.4); }
+.player-bg-Natalie { background-color: rgba(34, 197, 94, 0.15); border-color: rgba(34, 197, 94, 0.4); }
+.player-bg-Kait { background-color: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.4); }
+
+.player-text-Tom { color: #60a5fa; }
+.player-text-Stacie { color: #c084fc; }
+.player-text-Taylor { color: #f472b6; }
+.player-text-Austin { color: #FF6B35; }
+.player-text-Natalie { color: #4ade80; }
+.player-text-Kait { color: #22d3ee; }
